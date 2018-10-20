@@ -77,8 +77,7 @@ spec:
       serviceAccountName: fluentd-es
       containers:
       - name: fluentd-es
-        # image: k8s.gcr.io/fluentd-elasticsearch:v2.2.0
-        image: fluentd-elasticsearch-geoip:vAccion
+        image: venood12/fluentd-kubernetes:fluentd-elasticsearch-geoip
         env:
         - name: FLUENTD_ARGS
           value: --no-supervisor -q
